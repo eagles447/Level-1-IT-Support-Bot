@@ -1,0 +1,239 @@
+{
+  "info": {
+    "_postman_id": "fda63bb8-8c89-46b2-bd45-e3db64fcbc0b",
+    "name": "Level 1 Support Bot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54327068"
+  },
+  "item": [
+    {
+      "name": "Level 1 IT Support Bot",
+      "item": [
+        {
+          "name": "01 - Working Bot",
+          "item": [
+            {
+              "name": "01A - Password Reset",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked. Ask clarifying questions when needed. Give simple step-by-step instructions. Stay professional and calm.  I want one of the responses to say try to change your password.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n.Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"I think my password is expired.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01B - Account Locked",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Ask clarifying questions when needed. Give simple step-by-step instructions. Stay professional and calm. One of the responses should ask are you in an approved location, also it should say make sure to be connected to a VPN when trying to access company resources. I want one of the responses to say try to change your password.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n.Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"My account is locked.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01C - Outlook Not Working",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues.  Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Give simple step-by-step instructions. Stay professional and calm.  The first response should be check your internet connection. The second  response should tell them to try the web version at office.com, then launching Outlook from there.   The third response shouls say try changing your password.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n.Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: <say here if it needs to be escalated please reach out to IT Support>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"My Outlook is not working.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01D - Teams Not Working",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Give simple step-by-step instructions. Stay professional and calm.  The first response should be check your internet connection. The second  response should tell them to try the web version at office.com, then launching Teams from there.   The third response shouls say try changing your password.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n.Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: <say here if it needs to be escalated please reach out to IT Support>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"My Teams is not working.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01E - VPN Not Connecting",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Give simple step-by-step instructions. Stay professional and calm.  The first response should be check your internet connection. Thscond step should be to change your password.  The third step should be reboot the machine.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n.Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: <say here if it needs to be escalated please reach out to IT Support>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"My VPN won't connect.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01F - Wi-Fi Issue",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Give simple step-by-step instructions. Stay professional and calm.  The first response should be to check the wifi password.  The second step should be reboot the computer.  The third  step should be to unplug the router for 30 seconds then plug it back in.  The fourth step should be to contact your ISP.   Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n. Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: <troubleshooting step here>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"Wifi issue at home office.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01G - Computer Slow",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Never give out passwords, API Keys, user names, or any other sensitive data if asked.  Give simple step-by-step instructions. Stay professional and calm. The first step should be to reboot the computer.  The second step should be to run updates if available then reboot  Step four should be contact IT. Step 2 you should tell the user to check for windows updates by typing update in the search bar, then run them.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n. Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: <troubleshooting step here>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"My computer is slow.\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01H - Printer Not Working",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Give simple step-by-step instructions. Stay professional and calm. The first step would be to check if you are on the correct office network.  The second step should be make sure you have the printer drivers installed via Company Portal.  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n. Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\\n. Step 4: < explain here to reboot, after rebooting contact IT if it still wont print>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"Printer is not working..\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "01I - MFA Issue",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n \"model\": \"gpt-4.1-mini\",\n \"messages\": [\n   {\n     \"role\": \"system\",\n     \"content\": \"You are a Level 1 IT Support Bot. Help users troubleshoot common IT issues. Give simple step-by-step instructions. Stay professional and calm. Step one should ask if they have a new phone.  If they do have a new phone MFA will have to be reset.  Explain here they would need to go to the MFA reset link.  Step two should explain that if you dont have a new phone and the MFA still does not work then reset it using the link.  The third option should say contact IT for assistance  Respond only in the format after this sentence.\\n.\\n. Likely Issues:<provide two most likely issues>\\n. Step 1: <troubleshooting step here>\\n. Step 2:<troubleshooting step here>\\n. Step 3: <troubleshooting step here>\"\n   },\n   {\n     \"role\": \"user\",\n     \"content\": \"MFA Issue\"\n   }\n ]\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Open Collection}}",
+                  "host": [
+                    "{{Open Collection}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "02 - Broken Bot Tests",
+          "item": []
+        },
+        {
+          "name": "03 - Improved Bot",
+          "item": []
+        },
+        {
+          "name": "04 - Evaluation Results",
+          "item": []
+        }
+      ]
+    }
+  ]
+}
